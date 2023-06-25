@@ -1,17 +1,19 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
 
 function App() {
   const [messages, setMessages] = useState([]);
-  const [message, setMessage] = useState('');
+  const [inputValue, setInputValue] = useState('');
+  const [loading, setLoading] = useState(false);
   const responseRef = useRef(null);
 
-  const handleMessageChange = (event) => {
-    setMessage(event.target.value);
-  };
+  useEffect(() => {
+    // Fetch initial message when the component mounts
+    fetchMessage('Hello myGPT!');
+  }, []);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const fetchMessage = async (message) => {
+    setLoading(true);
 
     // Make a POST request to the backend endpoint
     const response = await fetch('/api/messages', {
@@ -23,6 +25,8 @@ function App() {
     });
 
     const data = await response.json();
+
+    // Update the messages with the received response
     const updatedMessages = [
       ...messages,
       { content: message, sender: 'user', id: messages.length },
@@ -30,8 +34,24 @@ function App() {
     ];
     setMessages(updatedMessages);
 
-    setMessage('');
+    setInputValue('');
+    setLoading(false);
     scrollToBottom();
+  };
+
+  const handleMessageChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (inputValue.trim() === '') {
+      return;
+    }
+
+    // Fetch response when the user sends a message
+    await fetchMessage(inputValue);
   };
 
   const scrollToBottom = () => {
@@ -40,24 +60,41 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Chatbot</h1>
+      <h1>MyGPT</h1>
+      
       <div className="message-container">
-        {messages.map((msg) => (
-          <div className={`message ${msg.sender}`} key={msg.id}>
+      {messages.map((msg) => (
+        <div className={`message ${msg.sender}`} key={msg.id}>
+          <div className="logo-container">
+          {msg.sender === 'bot' ? (
+            <img src="logo192.png" alt="bot-img" className="logo" />
+          ) : (
+            <img src="icons8-user-100-2.png" alt="user-img" className="logo" />
+          )}
+          </div>
+          <div className="text-container">
             {msg.content}
           </div>
-        ))}
-        <div ref={responseRef}></div>
-      </div>
-      <form onSubmit={handleSubmit}>
+        </div>
+      ))}
+      <div ref={responseRef}></div>
+    </div>
+
+      <div className="bottom-container">
+      <form onSubmit={handleSubmit} className="input-form">
         <input
           type="text"
-          value={message}
+          value={inputValue}
           onChange={handleMessageChange}
           placeholder="Enter your message"
+          disabled={loading}
+          className="input-text"
         />
-        <button type="submit">Send</button>
+        <button type="submit" disabled={loading} className="material-symbols-rounded">
+          <i className="fas fas fa-check"></i> 
+        </button>
       </form>
+    </div>
     </div>
   );
 }

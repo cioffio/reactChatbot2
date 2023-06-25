@@ -6,9 +6,10 @@ This is a solution for building a chatbot application using Flask and React. The
 
 Before running the application, make sure you have the following software installed on your machine:
 
-Node.js and npm (Node Package Manager)
-Python and Flask
-Installation
+1. Node.js and npm (Node Package Manager)
+2. Python and Flask
+
+## Installation
 
 To install the required dependencies, navigate to the project's root directory and run the following command:
 

@@ -12,7 +12,7 @@ def process_message():
     message = request.json['message']
 
     response = generate_response(message)
-    response = "Hola"
+    print(response)
 
     # Return the response as JSON
     return jsonify({'response': response})
@@ -24,7 +24,7 @@ def generate_response(message):
 
     # For now, let's just echo the received message
 
-    ç# Generate response from ChatGPT using the GPT-3.5-turbo model
+    # Generate response from ChatGPT using the GPT-3.5-turbo model
     reply = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=[
