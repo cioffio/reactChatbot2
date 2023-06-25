@@ -1,0 +1,64 @@
+.App {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .App h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  .message-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-bottom: 20px;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .user {
+    background-color: #007bff;
+    color: #fff;
+    text-align: right;
+  }
+  
+  .bot {
+    background-color: #f1f1f1;
+    color: #000;
+    text-align: left;
+  }
+  
+  .App form {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .App input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    color: #000;
+  }
+  
+  .App button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  
