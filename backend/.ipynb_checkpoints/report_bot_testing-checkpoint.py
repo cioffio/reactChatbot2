@@ -19,7 +19,6 @@ Column 3 name = Data_source. Column 3 entries = Source of the data, if a data po
 Column 4 name = Date_sourced
 Format the table as csv. Enclose each entry x with " as "x". Only use data provided in this prompt, do not use data from the internet which you have not been directly provided.
 Where a given entry has multiple parts, separate them with commas instead of quotation marks.
-Do not return any duplicates within column 1.
 ========
 Data: {data}
 ========
@@ -36,33 +35,25 @@ llm = ChatOpenAI(temperature=0, model_name=model_name, openai_api_key = openai.a
 chain = LLMChain(llm=llm,
                  prompt=report_prompt)
 
-def generate_report(company_name, 
-                    company_json_filename,
-                    source_of_funds_documents,
-                    source_of_funds):
-    ### Load company JSON data as a string 
-    json_string = ''
-    with open(f'{data_path}{company_json_filename}', "r") as json_data:
-        result = json_data.readlines()
 
-    for line in result:
-        if '*' not in line:
-            json_string += line
-    
-    result = chain.run(
-        {
-            'company_name': company_name,
-            'data': json_string,
-            'source_of_funds_documents': source_of_funds_documents,
-            'source_of_funds': source_of_funds
-        }
-    )
+json_string = ''
+company_name = 'Diageo'
+company_json_filename = 'Diageo_PLC.txt'
+source_of_funds_documents='None'
+source_of_funds='Source of funds not provided'
 
-    print(result)
+with open(f'{data_path}{company_json_filename}', "r") as json_data:
+    result = json_data.readlines()
 
-    report = pd.read_csv(StringIO(result), index_col='Data_point_name')
+for line in result:
+    if '*' not in line:
+        json_string += line
 
-    # report.to_csv('REPORT-TEST.CSV')
-
-    return report
-     
+result = chain.run(
+    {
+        'company_name': company_name,
+        'data': json_string,
+        'source_of_funds_documents': source_of_funds_documents,
+        'source_of_funds': source_of_funds
+    }
+)

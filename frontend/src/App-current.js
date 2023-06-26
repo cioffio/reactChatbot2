@@ -1,8 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
-import DataForm from './DataForm.js';
-import ChatForm from './ChatForm.js';
-import Messages from './Messages.js';
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -88,50 +85,61 @@ function App() {
     setFullLegalName(event.target.value);
   }
 
-  const handleRegisteredAddressChange = (event) => {
-    setRegisteredAddress(event.target.value);
-    console.log('test')
-  }
-
 // RW - END /////////////////////////////////////////
   return (
     <div className="App">
       <h1>MyGPT</h1>
       
       <div className="message-container">
-      <Messages 
-        props = {{
-          messages,
-          responseRef
-        }}
-      />
+      {messages.map((msg) => (
+        <div className={`message ${msg.sender}`} key={msg.id}>
+          <div className="logo-container">
+          {msg.sender === 'bot' ? (
+            <img src="logo192.png" alt="bot-img" className="logo" />
+          ) : (
+            <img src="icons8-user-100-2.png" alt="user-img" className="logo" />
+          )}
+          </div>
+          <div className="text-container">
+            {msg.content}
+          </div>
+        </div>
+      ))}
       <div ref={responseRef}></div>
     </div>
 
       <div className="bottom-container">
-      <ChatForm 
-        props = {{
-          handleSubmit,
-          inputValue,
-          handleMessageChange,
-          loading
-        }}
-      />
-      
-      <DataForm 
-
-        props={{
-          generateReport,
-          handleLegalNameChange,
-          handleRegisteredAddressChange,
-          fullLegalName,
-          registeredAddress,
-          loading
-          }}    
-      />
+      <form onSubmit={handleSubmit} className="input-form">
+        <input
+          type="text"
+          value={inputValue}
+          onChange={handleMessageChange}
+          placeholder="Enter your message"
+          disabled={loading}
+          className="input-text"
+        />
+        <button type="submit" disabled={loading} className="material-symbols-rounded">
+          <i className="fas fas fa-check"></i>
+        </button>
+      </form>
+        <button onClick={generateReport}>Fill forms</button>
+        <input 
+          type='text' 
+          onChangevalue={handleLegalNameChange}
+          value={fullLegalName}
+          placeholder="Full Legal Name"
+          className="legal-name-input-text"
+          />
+        <input 
+          type='text' 
+          // onChangevalue={handleLegalNameChange}
+          value={registeredAddress}
+          placeholder="Registered Address"
+          className="registered-address-input-text"
+          />
     </div>
     </div>
   );
-};
+}
 
 export default App;

@@ -13,12 +13,13 @@ CORS(app)  # Initialize CORS with your Flask app
 main_chat_model = initialise_model(api_key=openai.api_key)
 
 df = pd.DataFrame(
+    data='test',
     index = ['Full legal name', 'Legal form', 'Registered address', 'Principal business address (may be the same as registered address)',
              'Business description (SIC codes)', 'Name of key executives', 'Registration authority', 'Registration number',
              'Registration date', 'Registration status', 'Regulator (only for finanial institutions)',
-              'Identification of UBO (Ultimate Beneficial Owner)', 'Source of Funds'],
-    columns = ['Data_point_name', 'Data_point', 'Data_source', 'Date_sourced']
-).set_index('Data_point_name')
+             'Identification of UBO (Ultimate Beneficial Owner)', 'Source of Funds'],
+    columns = ['Data_point', 'Data_source', 'Date_sourced']
+)
 
 data_point_name_map = {
     'Full legal name': 'full_legal_name',
@@ -31,7 +32,7 @@ data_point_name_map = {
     'Registration number': 'registration_number',
     'Registration date': 'registration_date',
     'Registration status': 'registration_status',
-    'Regulator (only for finanial institutions)': 'regulator',
+    # 'Regulator (only for financial institutions)': 'regulator',
     'Identification of UBO (Ultimate Beneficial Owner)' : 'ubo',
     'Source of Funds': 'source_of_funds'
 }
@@ -59,9 +60,17 @@ def save_report(report: pd.DataFrame):
     """Scrape the available json data and source of funds data, creating a 'source of truth' table
     that will be stored in the flask script for future use, and which will be referenced by the javascript
     as well as the chat models."""
-    for col in report.columns:
-        for row in report.index:
-            df.loc[row, col] = copy(report.loc[row, col])
+
+    print('#' * 40)
+    print(report)
+    print('#' * 40)
+    print(df)
+
+    df.update(report)
+
+    # for col in report.columns:
+        # for row in report.index:
+            # df.loc[row, col] = copy(report.loc[row, col])
 
 @app.route('/api/report', methods=['POST'])
 def generate_and_save_report():
@@ -76,8 +85,16 @@ def generate_and_save_report():
     
     json_report = {value: df.loc[key, 'Data_point'] for key, value in data_point_name_map.items()}
 
+
+    # json_report = {'full_legal_name' : 'DIAGEO_PLC',
+                #    'registered_address' : 'Millbank'}
+
+    print(json_report)
+
     # return {'full_legal_name': df.loc['Full legal name', 'Data_point']}
     return json_report
+
+
 
 
 test = 0
