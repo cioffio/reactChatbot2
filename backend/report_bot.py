@@ -58,11 +58,7 @@ def generate_report(company_name,
         }
     )
 
-    print(result)
-
     report = pd.read_csv(StringIO(result), index_col='Data_point_name')
-
-    # report.to_csv('REPORT-TEST.CSV')
 
     return report
      

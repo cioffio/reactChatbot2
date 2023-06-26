@@ -24,30 +24,6 @@ function DataForm(props) {
           />
         </div>
     )
-}
-
-// function Form({ generateReport, handleLegalNameChange, fullLegalName, registeredAddress }) {   
-    
-//     return (
-//         <div>
-//         <button onClick={generateReport}>Fill forms</button>
-//         <input 
-//           type='text' 
-//           onChangevalue={handleLegalNameChange}
-//           value={fullLegalName}
-//           placeholder="Full Legal Name"
-//           className="legal-name-input-text"
-//           />
-//         <input 
-//           type='text' 
-//           // onChangevalue={handleLegalNameChange}
-//           value={registeredAddress}
-//           placeholder="Registered Address"
-//           className="registered-address-input-text"
-//           />
-//         </div>
-//     )
-// };
-
+};
 
 export default DataForm;
