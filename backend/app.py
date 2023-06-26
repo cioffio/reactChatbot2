@@ -1,9 +1,12 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from embedding_chatbot import initialise_model
 import openai
 
 app = Flask(__name__)
 CORS(app)  # Initialize CORS with your Flask app
+
+main_chat_model = initialise_model(api_key=openai.api_key)
 
 # Endpoint for receiving and processing messages
 @app.route('/api/messages', methods=['POST'])
