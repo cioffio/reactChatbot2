@@ -60,7 +60,7 @@ function App() {
   const scrollToBottom = () => {
     responseRef.current.scrollIntoView({ behavior: 'smooth' });
   };
-// RW - CREATING FUNCTION /////////////////////////////////////////
+// TODO: create these variables using more compact notation (you can define a single that stores all of these, don't have time to look up and test the exact syntax)
   const [fullLegalName, setFullLegalName] = useState('');
   const [registeredAddress, setRegisteredAddress] = useState('');
 
@@ -73,27 +73,23 @@ function App() {
       headers: {
         'Content-Type': 'application/json',
       },
-      // body: JSON.stringify({ message }),
     });
     const data = await response.json()
     setFullLegalName(data.full_legal_name)
     setRegisteredAddress(data.registered_address)
     setLoading(false);
-    // const handleReportChange = (event) => {
-    //   setFullLegalName(response.json().full_legal_name)
-    // }
-  }
+
+  };
 
   const handleLegalNameChange = (event) => {
     setFullLegalName(event.target.value);
-  }
+  };
 
   const handleRegisteredAddressChange = (event) => {
     setRegisteredAddress(event.target.value);
     console.log('test')
-  }
+  };
 
-// RW - END /////////////////////////////////////////
   return (
     <div className="App">
       <h1>MyGPT</h1>
