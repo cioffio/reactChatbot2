@@ -6,6 +6,8 @@
 /backend/.flaskenv
 /.pnp
 .pnp.js
+/backend/__pycache__
+/backend/venv
 
 # testing
 /coverage

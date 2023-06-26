@@ -17,14 +17,9 @@ def process_message():
     # Return the response as JSON
     return jsonify({'response': response})
 
-test = 0
-
 # Function to generate a response based on the message
 def generate_response(message):
-    global test
-    test += 1
-    
-    print(test)
+
     # You can use any NLP or ML techniques here
 
     # For now, let's just echo the received message
@@ -38,7 +33,6 @@ def generate_response(message):
         ]
     )
     message = reply.choices[0]["message"]["content"].strip()
-    message += f'{test=}'
     return message
 
 if __name__ == '__main__':
