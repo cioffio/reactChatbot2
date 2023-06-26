@@ -1,12 +1,28 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from embedding_chatbot import initialise_model
+from report_bot import generate_report
 import openai
+from copy import copy
+import pandas as pd
 
 app = Flask(__name__)
 CORS(app)  # Initialize CORS with your Flask app
 
+
 main_chat_model = initialise_model(api_key=openai.api_key)
+
+df = pd.DataFrame(
+    index = ['Full legal name', 'Legal form', 'Registered address', 'Principal business address (may be the same as registered address)',
+             'Business description (SIC codes)', 'Name of key executives', 'Registration authority', 'Registration number',
+             'Registration date', 'Registration status', 'Regulator (only for finanial institutions)',
+              'Identification of UBO (Ultimate Beneficial Owner)', 'Source of Funds'],
+    columns = ['Data_point_name', 'Data_point', 'Data_source', 'Date_sourced']
+).set_index('Data_point_name')
+
+# In a real application where you select case files, this would be chosen
+# using javascript
+company_name = 'Diageo'
 
 # Endpoint for receiving and processing messages
 @app.route('/api/messages', methods=['POST'])
@@ -20,14 +36,37 @@ def process_message():
     # Return the response as JSON
     return jsonify({'response': response})
 
+
+def save_report(report: pd.DataFrame):
+    """Scrape the available json data and source of funds data, creating a 'source of truth' table
+    that will be stored in the flask script for future use, and which will be referenced by the javascript
+    as well as the chat models."""
+    for col in report.columns:
+        for row in report.index:
+            df.loc[row, col] = copy(report.loc[row, col])
+
+@app.route('/api/report', methods=['POST'])
+def generate_and_save_report():
+    print('calling generate_and_save_report through the api/report endpoint')
+    report = generate_report(company_name=company_name,
+                                company_json_filename='Diageo_PLC.txt',
+                                source_of_funds_documents='None',
+                                source_of_funds='Source of funds not provided')
+    save_report(report)
+
+    # return {data_point_name: df.loc[data_point_name, 'Data_point'] for data_point_name in df.index}
+    return {'full_legal_name': df.loc['Full legal name', 'Data_point']}
+
+
+
 test = 0
 
 # Function to generate a response based on the message
 def generate_response(message):
-    global test
-    test += 1
+    # global test
+    # test += 1
     
-    print(test)
+    # print(test)
     # You can use any NLP or ML techniques here
 
     # For now, let's just echo the received message
@@ -41,7 +80,8 @@ def generate_response(message):
         ]
     )
     message = reply.choices[0]["message"]["content"].strip()
-    message += f'{test=}'
+    # message = main_chat_model
+    # message += f'{test=}'
     return message
 
 if __name__ == '__main__':

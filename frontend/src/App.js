@@ -6,6 +6,7 @@ function App() {
   const [inputValue, setInputValue] = useState('');
   const [loading, setLoading] = useState(false);
   const responseRef = useRef(null);
+  const [fullLegalName, setFullLegalName] = useState('');
 
   useEffect(() => {
     // Fetch initial message when the component mounts
@@ -57,7 +58,33 @@ function App() {
   const scrollToBottom = () => {
     responseRef.current.scrollIntoView({ behavior: 'smooth' });
   };
+// RW - CREATING FUNCTION /////////////////////////////////////////
+  const generateReport = async () => {
+    setLoading(true);
 
+    // Make a POST request to the backend endpoint
+    const response = await fetch('/api/report', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      // body: JSON.stringify({ message }),
+    });
+    const data = await response.json()
+    setFullLegalName(data.full_legal_name)
+
+    // const handleReportChange = (event) => {
+    //   setFullLegalName(response.json().full_legal_name)
+    // }
+  }
+
+  const handleLegalNameChange = (event) => {
+    setFullLegalName(event.target.value);
+  }
+
+
+
+// RW - END /////////////////////////////////////////
   return (
     <div className="App">
       <h1>MyGPT</h1>
@@ -91,9 +118,17 @@ function App() {
           className="input-text"
         />
         <button type="submit" disabled={loading} className="material-symbols-rounded">
-          <i className="fas fas fa-check"></i> 
+          <i className="fas fas fa-check"></i>
         </button>
       </form>
+        <button disabled={loading} onClick={generateReport}></button>
+        <input 
+          type='text' 
+          onChangevalue={handleLegalNameChange}
+          value={fullLegalName}
+          placeholder="Full Legal Name"
+          className="legal-name-input-text"
+          />
     </div>
     </div>
   );
