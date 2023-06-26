@@ -82,8 +82,6 @@ function App() {
     setFullLegalName(event.target.value);
   }
 
-
-
 // RW - END /////////////////////////////////////////
   return (
     <div className="App">

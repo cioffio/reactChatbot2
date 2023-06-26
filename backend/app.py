@@ -20,6 +20,24 @@ df = pd.DataFrame(
     columns = ['Data_point_name', 'Data_point', 'Data_source', 'Date_sourced']
 ).set_index('Data_point_name')
 
+data_point_name_map = {
+    'Full legal name': 'full_legal_name',
+    'Legal form': 'legal_form',
+    'Registered address': 'registered_address',
+    'Principal business address (may be the same as registered address)':'principal_business_address',
+    'Business description (SIC codes)': 'business_description',
+    'Name of key executives': 'key_executives',
+    'Registration authority': 'registration_authority',
+    'Registration number': 'registration_number',
+    'Registration date': 'registration_date',
+    'Registration status': 'registration_status',
+    'Regulator (only for finanial institutions)': 'regulator',
+    'Identification of UBO (Ultimate Beneficial Owner)' : 'ubo',
+    'Source of Funds': 'source_of_funds'
+}
+
+
+
 # In a real application where you select case files, this would be chosen
 # using javascript
 company_name = 'Diageo'
@@ -55,8 +73,11 @@ def generate_and_save_report():
     save_report(report)
 
     # return {data_point_name: df.loc[data_point_name, 'Data_point'] for data_point_name in df.index}
-    return {'full_legal_name': df.loc['Full legal name', 'Data_point']}
+    
+    json_report = {value: df.loc[key, 'Data_point'] for key, value in data_point_name_map.items()}
 
+    # return {'full_legal_name': df.loc['Full legal name', 'Data_point']}
+    return json_report
 
 
 test = 0
