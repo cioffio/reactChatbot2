@@ -9,6 +9,7 @@
 /backend/__pycache__
 /backend/venv
 /backend/data
+/backend/.ipynb_checkpoints
 
 # testing
 /coverage
