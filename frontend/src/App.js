@@ -72,7 +72,7 @@ function App() {
     });
     const data = await response.json()
     setFullLegalName(data.full_legal_name)
-
+    setLoading(false);
     // const handleReportChange = (event) => {
     //   setFullLegalName(response.json().full_legal_name)
     // }
@@ -121,7 +121,7 @@ function App() {
           <i className="fas fas fa-check"></i>
         </button>
       </form>
-        <button disabled={loading} onClick={generateReport}></button>
+        <button onClick={generateReport}>Fill forms</button>
         <input 
           type='text' 
           onChangevalue={handleLegalNameChange}
