@@ -21,7 +21,28 @@ This will install all the necessary packages listed in the package.json file.
 
 ## Usage
 
-To start the React development server, use the following command:
+To create the python virtual environment you should use, navigate to the backend directory and run the following commands:
+
+To create the virtual environment
+python -m venv venv
+
+To activate it
+venv/Scripts/activate
+
+To install the required dependencies
+pip install -r requirements.txt
+
+This might take a while (pip install can be very slow), it took me about 30 minutes to do.
+
+To start the Flask backend, navigate to the frontend directory and use the following command, making sure to have activated the python virtual environment first:
+
+```
+npm run start-backend
+```
+
+This command navigates to the backend directory (assuming it exists at the same level as the React app), and runs the Flask application.
+
+To start the React development server, navigate to the frontend directory, and use the following command:
 
 ```
 npm start
@@ -30,14 +51,6 @@ npm start
 This will launch the React application in development mode. You can access the application in your browser at http://localhost:3000.
 
 The React development server is configured to proxy API requests to the Flask backend, which is running on http://localhost:5000. The proxy configuration is specified in the package.json file.
-
-To start the Flask backend separately, you can use the following command:
-
-```
-npm run start-backend
-```
-
-This command navigates to the backend directory (assuming it exists at the same level as the React app), and runs the Flask application. Make sure you have the necessary Flask dependencies installed in the backend directory.
 
 ## Building the Application
 
