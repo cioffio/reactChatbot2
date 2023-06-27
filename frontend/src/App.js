@@ -64,32 +64,6 @@ function App() {
   const [fullLegalName, setFullLegalName] = useState('');
   const [registeredAddress, setRegisteredAddress] = useState('');
 
-  const generateReport = async () => {
-    setLoading(true);
-
-    // Make a POST request to the backend endpoint
-    const response = await fetch('/api/report', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    const data = await response.json()
-    setFullLegalName(data.full_legal_name);
-    setRegisteredAddress(data.registered_address);
-    setLoading(false);
-
-  };
-
-  const handleLegalNameChange = (event) => {
-    setFullLegalName(event.target.value);
-  };
-
-  const handleRegisteredAddressChange = (event) => {
-    setRegisteredAddress(event.target.value);
-    console.log('test')
-  };
-
   return (
     <div className="App">
       <h1>MyGPT</h1>
@@ -117,9 +91,12 @@ function App() {
       <DataForm 
 
         props={{
-          generateReport,
-          handleLegalNameChange,
-          handleRegisteredAddressChange,
+          // generateReport,
+          // handleLegalNameChange,
+          // handleRegisteredAddressChange,
+          setFullLegalName,
+          setRegisteredAddress,
+          setLoading,
           fullLegalName,
           registeredAddress,
           loading
