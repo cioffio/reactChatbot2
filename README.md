@@ -34,6 +34,11 @@ pip install -r requirements.txt
 
 This might take a while (pip install can be very slow), it took me about 30 minutes to do.
 
+You need to create the file ".flaskenv" in backend/ which contains the following lines, where you should replace ___ with your openai api key:
+FLASK_APP=app.py
+FLASK_ENV=development
+OPENAI_API_KEY=___
+
 To start the Flask backend, navigate to the frontend directory and use the following command, making sure to have activated the python virtual environment first:
 
 ```

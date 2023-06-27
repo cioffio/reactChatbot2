@@ -9,7 +9,6 @@ import pandas as pd
 app = Flask(__name__)
 CORS(app)  # Initialize CORS with your Flask app
 
-
 main_chat_model = initialise_model(api_key=openai.api_key)
 
 df = pd.DataFrame(
