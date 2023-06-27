@@ -39,6 +39,8 @@ FLASK_APP=app.py
 FLASK_ENV=development
 OPENAI_API_KEY=___
 
+You should also create the directory backend/data/ which should contain the necessary data files (obtained separately)
+
 To start the Flask backend, navigate to the frontend directory and use the following command, making sure to have activated the python virtual environment first:
 
 ```
