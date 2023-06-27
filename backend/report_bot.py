@@ -64,7 +64,7 @@ def generate_report(company_name,
     # Save output for debugging purposes
     reports_dir = os.path.join(data_path, 'saved_reports')
     os.makedirs(reports_dir, exist_ok=True)
-    report_id = datetime.now().strftime("%I%p%m%Y")
+    report_id = datetime.now().strftime("%Y%m%d%H%M%S")
     report_path = os.path.join(reports_dir, f'report_{report_id}.txt')
 
     with open(report_path, 'w') as f:
