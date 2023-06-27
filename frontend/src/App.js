@@ -75,8 +75,8 @@ function App() {
       },
     });
     const data = await response.json()
-    setFullLegalName(data.full_legal_name)
-    setRegisteredAddress(data.registered_address)
+    setFullLegalName(data.full_legal_name);
+    setRegisteredAddress(data.registered_address);
     setLoading(false);
 
   };

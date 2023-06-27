@@ -3,6 +3,8 @@ from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 import openai
 from langchain.chains import LLMChain
+from datetime import datetime
+import os
 
 import pandas as pd
 from io import StringIO
@@ -48,7 +50,8 @@ def generate_report(company_name,
     for line in result:
         if '*' not in line:
             json_string += line
-    
+
+
     result = chain.run(
         {
             'company_name': company_name,
@@ -58,6 +61,16 @@ def generate_report(company_name,
         }
     )
 
+    # Save output for debugging purposes
+    reports_dir = os.path.join(data_path, 'saved_reports')
+    os.makedirs(reports_dir, exist_ok=True)
+    report_id = datetime.now().strftime("%I%p%m%Y")
+    report_path = os.path.join(reports_dir, f'report_{report_id}.txt')
+
+    with open(report_path, 'w') as f:
+        f.write(result)
+
+    # Convert output to a pandas df
     report = pd.read_csv(StringIO(result), index_col='Data_point_name')
 
     return report
