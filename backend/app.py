@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from embedding_chatbot import initialise_model
 from report_bot import generate_report
+from report_bot import generate_report_dictionary
 import openai
 from copy import copy
 import pandas as pd
@@ -94,7 +95,27 @@ def generate_and_save_report():
     return json_report
 
 
+@app.route('/api/reportData', methods=['POST'])
+def generate_and_save_report():
+    print('calling generate_and_save_report through the api/report endpoint')
+    report = generate_report(company_name=company_name,
+                                company_json_filename='Diageo_PLC.txt',
+                                source_of_funds_documents='None',
+                                source_of_funds='Source of funds not provided')
+    save_report(report)
 
+    # return {data_point_name: df.loc[data_point_name, 'Data_point'] for data_point_name in df.index}
+    
+    json_report = {value: df.loc[key, 'Data_point'] for key, value in data_point_name_map.items()}
+
+
+    # json_report = {'full_legal_name' : 'DIAGEO_PLC',
+                #    'registered_address' : 'Millbank'}
+
+    print(json_report)
+
+    # return {'full_legal_name': df.loc['Full legal name', 'Data_point']}
+    return json_report
 
 test = 0
 
@@ -123,3 +144,26 @@ def generate_response(message):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+app.route('/api/registered-address', methods=['POST'])
+def generate_and_save_report2():
+    print('calling generate_and_save_report through the api/report endpoint')
+    report = generate_report_dictionary(company_name=company_name,
+                                company_json_filename='Diageo_PLC.txt',
+                                source_of_funds_documents='None',
+                                source_of_funds='Source of funds not provided')
+    save_report(report)
+
+    # return {data_point_name: df.loc[data_point_name, 'Data_point'] for data_point_name in df.index}
+    
+    json_report = {value: df.loc[key, 'Data_point'] for key, value in data_point_name_map.items()}
+
+
+    # json_report = {'full_legal_name' : 'DIAGEO_PLC',
+                #    'registered_address' : 'Millbank'}
+
+    print(json_report)
+
+    # return {'full_legal_name': df.loc['Full legal name', 'Data_point']}
+    return json_report

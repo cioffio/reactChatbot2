@@ -1,0 +1,108 @@
+.icon {
+  width: 100%;
+  height: 100%;
+}
+.alert.alert {
+  left: 1169px;
+  top: 18px;
+  width: 34.6667px;
+  transform: initial;
+}
+.shape.shape {
+  left: calc(50% - 0.3333px);
+}
+.shape {
+  left: calc(50% - 0.3333px);
+}
+.icon2 {
+  width: 100%;
+  height: 100%;
+}
+.root {
+  width: 1440px;
+  height: min-content;
+  flex-direction: column;
+  padding: 10px 0 10px 10px;
+  background-color: #6800a6;
+}
+.navigationBar {
+  position: relative;
+  height: 64px;
+  align-self: stretch;
+  align-items: flex-start;
+}
+.loginIcon {
+  position: absolute;
+  left: 1351px;
+  top: 6px;
+  width: min-content;
+  height: min-content;
+  padding: 10px;
+}
+.accentureSmartKYC {
+  color: #fff;
+  font-size: 20px;
+  line-height: 16px;
+  font-weight: bold;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 25px;
+  top: 24px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.line1 {
+  transform-origin: bottom left;
+  position: absolute;
+  left: 1333px;
+  top: 55px;
+  width: 48px;
+  max-width: 100%;
+  height: 0;
+  max-height: 100%;
+  border-bottom: solid 1px #fff;
+  margin-bottom: -1px;
+  transform: matrix(0, -1, 1, 0, 0, 0);
+}
+.rectangle3 {
+  position: absolute;
+  left: 1222px;
+  top: 12px;
+  width: 77px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: #6800a6;
+}
+.eN {
+  color: #fff;
+  font-size: 20px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1236px;
+  top: 18px;
+  width: 34px;
+  height: 22px;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.stringIconChevronDown {
+  color: #fff;
+  font-size: 12px;
+  line-height: 100%;
+  font-family: Fabric External MDL2 Assets, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', 'Liberation Sans', sans-serif;
+  position: absolute;
+  right: 148px;
+  top: 25px;
+  width: 12px;
+  height: 16px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

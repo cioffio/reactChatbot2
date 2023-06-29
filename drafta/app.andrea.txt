@@ -1,0 +1,221 @@
+import { memo } from 'react';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import classes from './App.module.css';
+import resets from './components/_resets.module.css';
+import CaseFiles from './CaseFiles/CaseFiles';
+import IDDClippedContentVersion from './IDDClippedContentVersion/IDDClippedContentVersion'
+
+const App = () => {
+  return (
+    <Router>
+      <div className={`${resets.clapyResets} ${classes.root}`}>
+        <Routes>
+          <Route path="/" element={<CaseFiles />} />
+          <Route path="/dashboard2" element={<IDDClippedContentVersion />} /> {/* Add the route for /dashboard2 */}
+        </Routes>
+      </div>
+    </Router>
+  );
+};
+
+export default App;
+
+
+import { memo } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import classes from './App.module.css';
+import resets from './components/_resets.module.css';
+import CaseFiles from './CaseFiles/CaseFiles';
+import IDDClippedContentVersion from './IDDClippedContentVersion/IDDClippedContentVersion';
+import ChatBot from 'react-simple-chatbot';
+import App1 from '../src/App.module.css'
+import component1 from './App.module.css'
+import component2 from './App.module.css'
+const steps = [
+  {
+    id: '0',
+    message: 'Hey Geek!',
+    end: true,
+  },
+];
+
+const App = () => {
+  return (
+    <Router>
+        <Routes>
+          <Route path="/" element = {
+            <div>
+              <div className="classes.component1">
+                <CaseFiles />
+              </div>
+              <div className="classes.component2">
+                <ChatBot steps={steps} />
+              </div>
+            </div>
+          } />
+          < Route
+            path="/additional"
+            element={
+              <div>
+                <IDDClippedContentVersion />
+                <div className="App">
+                  <h1>Welcome to Geeksforgeeks</h1>
+                  <ChatBot steps={steps} />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/dashboard2"
+            element={
+                <div className="App1">
+                  <ChatBot steps={steps} />
+                </div>
+            }
+          />
+        </Routes>
+    </Router>
+  );
+};
+
+export default App;
+
+import { memo } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import classes from './App.module.css';
+import resets from './components/_resets.module.css';
+import CaseFiles from './CaseFiles/CaseFiles';
+import IDDClippedContentVersion from './IDDClippedContentVersion/IDDClippedContentVersion';
+import ChatBot from 'react-simple-chatbot';
+import App1 from '../src/App.module.css'
+import component1 from './App.module.css'
+import component2 from './App.module.css'
+const steps = [
+  {
+    id: '0',
+    message: 'Hey Geek!',
+    end: true,
+  },
+];
+
+
+const App = () => {
+  return (
+    <Router>
+      <div className={`${resets.clapyResets}`}>
+        <Routes>
+          <Route path="/" element={
+            <div className={classes.componen1}>
+              <CaseFiles />
+            </div>
+          } />
+          <Route path="/additional" element={
+            <div className={classes.component1}>
+              <IDDClippedContentVersion />
+            </div>
+          } />
+          <Route path="/dashboard2" element={
+            <div className={classes.component1}>
+              <IDDClippedContentVersion />
+            </div>
+          } />
+        </Routes>
+        <div className={`${classes.App1}`}>
+          <ChatBot steps={steps} />
+        </div>
+      </div>
+    </Router>
+  );
+};
+
+export default App;
+
+
+import { memo } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import classes from './App.module.css';
+import resets from './components/_resets.module.css';
+import CaseFiles from './CaseFiles/CaseFiles';
+import IDDClippedContentVersion from './IDDClippedContentVersion/IDDClippedContentVersion';
+import ChatBot from 'react-simple-chatbot';
+import { ThemeProvider } from 'styled-components';
+import Chat from './Chat'
+
+const steps = [
+  {
+    id: '0',
+    message: 'Hey Geek!',
+    trigger: '1',
+  },
+  {
+    id: '1',
+    message: 'Please write your username',
+    trigger: '2',
+  },
+  {
+    id: '2',
+    user: true,
+    trigger: '3',
+  },
+  {
+    id: '3',
+    message: 'Hi {previousValue}, how can I help you?',
+    trigger: '4',
+  },
+  {
+    id: '4',
+    options: [
+      { value: 1, label: 'View Courses' },
+      { value: 2, label: 'Read Articles' },
+    ],
+    end: true,
+  },
+];
+
+const theme = {
+  background: '#C9FF8F',
+  headerBgColor: '#197B22',
+  headerFontSize: '20px',
+  botBubbleColor: '#0F3789',
+  headerFontColor: 'white',
+  botFontColor: 'white',
+  userBubbleColor: '#FF5733',
+  userFontColor: 'white',
+};
+
+const config = {
+  botAvatar: 'img.png',
+  floating: true,
+};
+
+const App = () => {
+  return (
+    <Router>
+        <Routes>
+          <Route path="/" element={<div className={classes.component1}><CaseFiles /></div>} />
+          <Route path="/additional" element={<div className={classes.component1}><IDDClippedContentVersion /></div>} />
+          <Route path="/dashboard2" element={<div className={classes.component1}><IDDClippedContentVersion /></div>} />
+        </Routes>
+        <div className={classes.component2}>
+          <ThemeProvider theme={theme}>
+            <Chat {...config} />
+          </ThemeProvider>
+        </div>
+    </Router>
+  );
+};
+
+export default App;
+
+
+       <CellCell
+                    className={classes.cellCell2}
+                    classes={{ stringContainer: classes.stringContainer2 }}
+                    text={{
+                      stringCellSecondary: (
+                        <Link to="/dashboard2" className={classes.link}>
+                          <div className={classes.stringCellSecondary2}>Itsu Limited</div>
+                        </Link>
+                      ),
+                    }}

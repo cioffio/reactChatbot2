@@ -75,3 +75,45 @@ def generate_report(company_name,
 
     return report
      
+
+def generate_report_dictionary(company_name, 
+                    company_json_filename,
+                    source_of_funds_documents,
+                    source_of_funds):
+    ### Load company JSON data as a string 
+    json_string = ''
+    with open(f'{data_path}{company_json_filename}', "r") as json_data:
+        result = json_data.readlines()
+
+    for line in result:
+        if '*' not in line:
+            json_string += line
+
+
+    result = chain.run(
+        {
+            'company_name': company_name,
+            'data': json_string,
+            'source_of_funds_documents': source_of_funds_documents,
+            'source_of_funds': source_of_funds
+        }
+    )
+
+    # Save output for debugging purposes
+    reports_dir = os.path.join(data_path, 'saved_reports')
+    os.makedirs(reports_dir, exist_ok=True)
+    report_id = datetime.now().strftime("%Y%m%d%H%M%S")
+    report_path = os.path.join(reports_dir, f'report_{report_id}.txt')
+
+    with open(report_path, 'w') as f:
+        f.write(result)
+
+    # Convert output to a pandas df
+    report = pd.read_csv(StringIO(result), index_col='Data_point_name')
+    # Convert output to a pandas df
+    report_dict = report.to_dict(orient='split')
+    report_data = dict(zip(report_dict['index'], report_dict['data']))
+
+    return report_data
+
+         

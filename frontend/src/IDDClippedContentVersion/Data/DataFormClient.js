@@ -1,0 +1,231 @@
+import './App.css';
+
+import resets from '../../_resets.module.css';
+
+import { memo } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import DataFormClient from './DataFormClient.js'
+
+import { Help_outline } from '../Help_outline/Help_outline';
+import { StText_area_ThemeLightModeDisa } from '../StText_area_ThemeLightModeDisa/StText_area_ThemeLightModeDisa';
+import classes from './Data.module.css';
+import { VectorIcon } from './VectorIcon';
+import { VectorIcon2 } from './VectorIcon2';
+import { VectorIcon3 } from './VectorIcon3';
+import { VectorIcon4 } from './VectorIcon4';
+import { VectorIcon5 } from './VectorIcon5';
+import { VectorIcon6 } from './VectorIcon6';
+import { VectorIcon7 } from './VectorIcon7';
+import { VectorIcon8 } from './VectorIcon8';
+import { VectorIcon9 } from './VectorIcon9';
+import { VectorIcon10 } from './VectorIcon10';
+import { VectorIcon11 } from './VectorIcon11';
+import { VectorIcon12 } from './VectorIcon12';
+import { VectorIcon13 } from './VectorIcon13';
+import { VectorIcon14 } from './VectorIcon14';
+import './App.css';
+
+
+function DataForm(props) {   
+    
+
+  const generateReport = async () => {
+    props.props.setLoading(true);
+    props.onButtonClick(); // Call the callback function from the parent component
+
+
+    // Make a POST request to the backend endpoint
+    const response = await fetch('/api/report', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+   
+    const data1 = "Hello Everyone";
+  
+
+    const data = await response.json()
+    props.props.setFullLegalName(data.full_legal_name);
+    props.props.setRegisteredAddress(data.registered_address);
+    props.props.setLoading(false);
+  
+  };
+
+  const handleLegalNameChange = (event) => {
+    props.props.setFullLegalName(event.target.value);
+    
+    };
+  
+
+  const handleRegisteredAddressChange = (event) => {
+    props.props.setRegisteredAddress(event.target.value);
+
+    };
+
+  return (
+    <div className={`${resets.clapyResets} ${classes.root}`}>
+      <div className={classes.text}>Enriched Data</div>
+      <div className={classes.text2}>Initial Data</div>
+      <div className="bottom-container">
+  <button className="custom-button" onClick={generateReport}>Fill forms</button>
+</div>
+      <StText_area_ThemeLightModeDisa
+        className={classes.stText_area}
+        hide={{
+          message: true,
+          icon: true,
+        }}
+        text={{
+          label: <div className={classes.label}>Full Legal Name</div>,
+          placeholder: <div className={classes.placeholder}>ITSU Limited</div>,
+        }}
+      />
+      <StText_area_ThemeLightModeDisa
+        className={classes.stText_area2}
+        hide={{
+          helpMessage: true,
+        }}
+        text={{
+          label: <div className={classes.label2}>Legal Form</div>,
+          placeholder: <div className={classes.placeholder2}>Private Limited Company</div>,
+        }}
+      />
+      <div className={classes.stText_area5}>
+        <div className={classes.information}>
+          <div className={classes.label5}>Proof of Existance</div>
+        </div>
+        <div className={classes.input}></div>
+      </div>
+      <div className={classes.stText_area6}>
+        <div className={classes.information2}>
+          <div className={classes.label6}>Proof of Existance</div>
+        </div>
+        <div className={classes.input2}></div>
+      </div>
+      <div className={classes.stText_area7}>
+        <div className={classes.information3}>
+          <div className={classes.label7}>Legal Form</div>
+        </div>
+        <div className={classes.input3}></div>
+      </div>
+      <div className={classes.stText_area8}>
+        <div className={classes.information4}>
+          <div className={classes.label8}>Full Legal Name</div>
+        </div>
+        <div className={classes.input4}>
+        <div className={classes.placeholder}>{props.props.fullLegalName}</div>
+        </div>
+      </div>
+      <div className={classes.stText_area9}>
+        <div className={classes.information5}>
+          <div className={classes.label9}>Nature of Business</div>
+        </div>
+        <div className={classes.input5}></div>
+      </div>
+      <div className={classes.stText_area10}>
+        <div className={classes.information6}>
+          <div className={classes.label10}>Nature of Business</div>
+        </div>
+        <div className={classes.input6}></div>
+      </div>
+      <div className={classes.stText_area11}>
+        <div className={classes.information7}>
+          <div className={classes.label11}>Registry Number</div>
+        </div>
+        <div className={classes.input7}></div>
+      </div>
+      <div className={classes.stText_area12}>
+        <div className={classes.information8}>
+          <div className={classes.label12}>Registry Number</div>
+        </div>
+        <div className={classes.input8}></div>
+      </div>
+      <div className={classes.stText_area13}>
+        <div className={classes.information9}>
+          <div className={classes.label13}>Date of Incorporation</div>
+        </div>
+        <div className={classes.input9}></div>
+      </div>
+      <div className={classes.stText_area14}>
+        <div className={classes.information10}>
+          <div className={classes.label14}>Company Status</div>
+        </div>
+        <div className={classes.input10}></div>
+      </div>
+      <div className={classes.stText_area15}>
+        <div className={classes.information11}>
+          <div className={classes.label15}>Regulation (Financial Institutions)</div>
+        </div>
+        <div className={classes.input11}></div>
+      </div>
+      <div className={classes.stText_area16}>
+        <div className={classes.information12}>
+          <div className={classes.label16}>Regulation (Financial Institutions)</div>
+        </div>
+        <div className={classes.input12}></div>
+      </div>
+      <div className={classes.stText_area17}>
+        <div className={classes.information13}>
+          <div className={classes.label17}>Stock Exchange Listing</div>
+        </div>
+        <div className={classes.input13}></div>
+      </div>
+      <div className={classes.stText_area18}>
+        <div className={classes.information14}>
+          <div className={classes.label18}>Stock Exchange Listing</div>
+        </div>
+        <div className={classes.input14}></div>
+      </div>
+      <div className={classes.stText_area19}>
+        <div className={classes.information15}>
+          <div className={classes.label19}>Registered Address</div>
+        </div>
+        <div className={classes.input15}>
+        <div className={classes.placeholder}>{props.props.registeredAddress}</div>
+        </div>
+        <div className={classes.input16}>
+          <div className={classes.placeholder}>nulla</div>
+        </div>
+        <div className={classes.input17}></div>
+      </div>
+      <div className={classes.stText_area20}>
+        <div className={classes.information16}>
+          <div className={classes.label20}>Registered Address</div>
+        </div>
+        <div className={classes.input18}>
+          <div className={classes.placeholder5}>Ground and first floors Partnership House</div>
+        </div>
+        <div className={classes.input19}>
+          <div className={classes.placeholder6}>Carlisle Place</div>
+        </div>
+        <div className={classes.input20}>
+          <div className={classes.placeholder7}>London, England</div>
+        </div>
+      </div>
+      <StText_area_ThemeLightModeDisa
+        className={classes.stText_area3}
+        hide={{
+          helpMessage: true,
+        }}
+        text={{
+          label: <div className={classes.label3}>Date of Incorporation</div>,
+          placeholder: <div className={classes.placeholder3}>02 / 12 / 1996</div>,
+        }}
+      />
+      <StText_area_ThemeLightModeDisa
+        className={classes.stText_area4}
+        hide={{
+          helpMessage: true,
+        }}
+        text={{
+          label: <div className={classes.label4}>Company Status</div>,
+          placeholder: <div className={classes.placeholder4}>Active</div>,
+        }}
+      />
+    </div>
+  );
+}
+
+export default DataForm;
+

@@ -1,0 +1,43 @@
+.root {
+  position: absolute;
+  left: 6120px;
+  top: 1176px;
+  width: 1381px;
+  height: 61px;
+  align-items: flex-start;
+}
+.rectangle25 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 1.6393%;
+  background-color: #f0f2f6;
+  box-shadow: inset -1px 0px 0px #838383, inset 0px -1px 0px #838383, inset -1px 0px 0px #838383;
+}
+.text {
+  color: #018eff;
+  font-size: 20px;
+  line-height: 300%;
+  font-weight: bold;
+  font-family: Source Sans Pro, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1.3034%;
+  right: 38.6676%;
+  top: 3.2787%;
+  bottom: 0;
+  flex-direction: column;
+}
+.vector {
+  position: absolute;
+  left: 96.0898%;
+  right: 2.6068%;
+  top: 36.0656%;
+  bottom: 43.2632%;
+  overflow: visible;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}

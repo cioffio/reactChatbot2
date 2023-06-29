@@ -1,0 +1,1410 @@
+.cellCell.cellCell {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer.stringContainer {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary {
+  color: #018eff;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.link {
+  color: blue;
+}
+.cellCell2.cellCell2 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer2.stringContainer2 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary2 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell3.cellCell3 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer3.stringContainer3 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary3 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell4.cellCell4 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer4.stringContainer4 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary4 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell5.cellCell5 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer5.stringContainer5 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary5 {
+  color: #000;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell6.cellCell6 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer6.stringContainer6 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary6 {
+  color: #018eff;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell7.cellCell7 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer7.stringContainer7 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary7 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell8.cellCell8 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer8.stringContainer8 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary8 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell9.cellCell9 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer9.stringContainer9 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary9 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell10.cellCell10 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer10.stringContainer10 {
+  width: initial;
+  align-items: flex-start;
+  background-color: #fff;
+}
+.stringCellSecondary10 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell11.cellCell11 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer11.stringContainer11 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary11 {
+  color: #018eff;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell12.cellCell12 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer12.stringContainer12 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary12 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell13.cellCell13 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer13.stringContainer13 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary13 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell14.cellCell14 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer14.stringContainer14 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary14 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell15.cellCell15 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer15.stringContainer15 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary15 {
+  color: #000;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell16.cellCell16 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer16.stringContainer16 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary16 {
+  color: #018eff;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell17.cellCell17 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer17.stringContainer17 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary17 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell18.cellCell18 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer18.stringContainer18 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary18 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell19.cellCell19 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer19.stringContainer19 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary19 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell20.cellCell20 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer20.stringContainer20 {
+  width: initial;
+  align-items: flex-start;
+  background-color: #fff;
+}
+.stringCellSecondary20 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell21.cellCell21 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer21.stringContainer21 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary21 {
+  color: #018eff;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell22.cellCell22 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer22.stringContainer22 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary22 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell23.cellCell23 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer23.stringContainer23 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary23 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell24.cellCell24 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer24.stringContainer24 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary24 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell25.cellCell25 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer25.stringContainer25 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary25 {
+  color: #000;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell26.cellCell26 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer26.stringContainer26 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary26 {
+  color: #018eff;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell27.cellCell27 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer27.stringContainer27 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary27 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell28.cellCell28 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer28.stringContainer28 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary28 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell29.cellCell29 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer29.stringContainer29 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary29 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell30.cellCell30 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer30.stringContainer30 {
+  width: initial;
+  align-items: flex-start;
+  background-color: #fff;
+}
+.stringCellSecondary30 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell31.cellCell31 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer31.stringContainer31 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary31 {
+  color: #018eff;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell32.cellCell32 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer32.stringContainer32 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary32 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell33.cellCell33 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer33.stringContainer33 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary33 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell34.cellCell34 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer34.stringContainer34 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary34 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell35.cellCell35 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer35.stringContainer35 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary35 {
+  color: #000;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell36.cellCell36 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer36.stringContainer36 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary36 {
+  color: #018eff;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell37.cellCell37 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer37.stringContainer37 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary37 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell38.cellCell38 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer38.stringContainer38 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary38 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell39.cellCell39 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer39.stringContainer39 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary39 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell40.cellCell40 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer40.stringContainer40 {
+  width: initial;
+  align-items: flex-start;
+  background-color: #fff;
+}
+.stringCellSecondary40 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell41.cellCell41 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer41.stringContainer41 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary41 {
+  color: #018eff;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell42.cellCell42 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer42.stringContainer42 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary42 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell43.cellCell43 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer43.stringContainer43 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary43 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell44.cellCell44 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer44.stringContainer44 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary44 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell45.cellCell45 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer45.stringContainer45 {
+  width: initial;
+  align-items: flex-start;
+  background-color: #fff;
+}
+.stringCellSecondary45 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell46.cellCell46 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer46.stringContainer46 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary46 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell47.cellCell47 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer47.stringContainer47 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary47 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell48.cellCell48 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer48.stringContainer48 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary48 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell49.cellCell49 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer49.stringContainer49 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary49 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell50.cellCell50 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer50.stringContainer50 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary50 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell51.cellCell51 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer51.stringContainer51 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary51 {
+  color: #0282e8;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  text-decoration: underline;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell52.cellCell52 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer52.stringContainer52 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary52 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell53.cellCell53 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer53.stringContainer53 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary53 {
+  color: #201f1e;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell54.cellCell54 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer54.stringContainer54 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary54 {
+  color: #201f1e;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.cellCell55.cellCell55 {
+  z-index: 0;
+  width: 225px;
+}
+.stringContainer55.stringContainer55 {
+  width: initial;
+  align-items: flex-start;
+}
+.stringCellSecondary55 {
+  color: #000;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.image2.image2 {
+  background-image:/* webpackIgnore: true */ url('assets/image22.png');
+}
+.root {
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow-y: auto;
+}
+.kYCCaseList {
+  height: 670px;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 30px;
+  background-color: #fbfbfb;
+}
+.frame7 {
+  height: 92px;
+  align-self: stretch;
+  align-items: flex-start;
+  padding: 20px 5px;
+}
+.kYCCaseFiles {
+  color: #201f1e;
+  font-size: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.detailsHeaderDetailsHeader {
+  width: 1380px;
+  height: 85px;
+  align-self: stretch;
+  align-items: flex-start;
+  outline: solid 1px #201e20;
+  outline-offset: 0px;
+  background-color: #d6edf8;
+}
+.frame6 {
+  z-index: 0;
+  height: 73px;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 10px;
+}
+.frame8 {
+  position: relative;
+  width: 1348px;
+  height: 44px;
+  align-items: flex-start;
+}
+.rectangle2 {
+  position: absolute;
+  left: 6px;
+  top: 1px;
+  width: 313px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.shape {
+  position: absolute;
+  left: calc(50% - 643px);
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  overflow: visible;
+  transform: translate(-50%, -50%);
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}
+.search {
+  color: #000;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 50px;
+  top: 1px;
+  width: 151px;
+  height: 28px;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.rectangle4 {
+  position: absolute;
+  left: 1131px;
+  top: 2px;
+  width: 101px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.filter {
+  color: #201f1e;
+  font-size: 20px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1144px;
+  top: 8px;
+  width: 53px;
+  height: 21px;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.rectangle42 {
+  position: absolute;
+  left: 1247px;
+  top: 2px;
+  width: 101px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.sort {
+  color: #201f1e;
+  font-size: 20px;
+  line-height: 16px;
+  font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1262px;
+  top: 8px;
+  width: 53px;
+  height: 21px;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.vector {
+  position: absolute;
+  left: 97.5519%;
+  right: 0.9644%;
+  top: 36.3636%;
+  bottom: 34.2209%;
+  overflow: visible;
+}
+.icon2 {
+  width: 100%;
+  height: 100%;
+}
+.vector2 {
+  position: absolute;
+  left: 89.2433%;
+  right: 9.273%;
+  top: 36.3636%;
+  bottom: 34.2209%;
+  overflow: visible;
+}
+.icon3 {
+  width: 100%;
+  height: 100%;
+}
+.group2 {
+  position: relative;
+  width: 1380px;
+  height: 473px;
+}
+.frame5 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min-content;
+  height: min-content;
+  align-self: flex-start;
+  flex-direction: column;
+  outline: solid 0.5px #000;
+}
+.group1 {
+  position: relative;
+  width: 1380px;
+  height: 473px;
+}
+.rowDetailsRow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 27.2727%;
+  bottom: 63.6364%;
+  width: 1380px;
+  height: 43px;
+  place-content: space-between;
+  align-items: flex-start;
+  outline: solid 1px #201f1e;
+  outline-offset: 0px;
+  background-color: #e2e2e2;
+}
+.rowDetailsRow2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 36.3636%;
+  bottom: 54.5455%;
+  width: 1380px;
+  height: 43px;
+  place-content: space-between;
+  align-items: flex-start;
+  outline: solid 1px #201f1e;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.rowDetailsRow3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 45.4545%;
+  bottom: 45.4545%;
+  width: 1380px;
+  height: 43px;
+  place-content: space-between;
+  align-items: flex-start;
+  outline: solid 1px #201f1e;
+  outline-offset: 0px;
+  background-color: #e2e2e2;
+}
+.rowDetailsRow4 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 54.5455%;
+  bottom: 36.3636%;
+  width: 1380px;
+  height: 43px;
+  place-content: space-between;
+  align-items: flex-start;
+  outline: solid 1px #201f1e;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.rowDetailsRow5 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 63.6364%;
+  bottom: 27.2727%;
+  width: 1380px;
+  height: 43px;
+  place-content: space-between;
+  align-items: flex-start;
+  outline: solid 1px #201f1e;
+  outline-offset: 0px;
+  background-color: #e2e2e2;
+}
+.rowDetailsRow6 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 72.7273%;
+  bottom: 18.1818%;
+  width: 1380px;
+  height: 43px;
+  place-content: space-between;
+  align-items: flex-start;
+  outline: solid 1px #201f1e;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.rowDetailsRow7 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 81.8182%;
+  bottom: 9.0909%;
+  width: 1380px;
+  height: 43px;
+  place-content: space-between;
+  align-items: flex-start;
+  outline: solid 1px #201f1e;
+  outline-offset: 0px;
+  background-color: #e2e2e2;
+}
+.rowDetailsRow8 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 90.9091%;
+  bottom: 0;
+  width: 1380px;
+  height: 43px;
+  place-content: space-between;
+  align-items: flex-start;
+  outline: solid 1px #201f1e;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.rowDetailsRow9 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 18.1818%;
+  bottom: 72.7273%;
+  width: 1380px;
+  height: 43px;
+  place-content: space-between;
+  align-items: flex-start;
+  outline: solid 1px #201f1e;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.detailsHeaderDetailsHeader2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 90.9091%;
+  width: 1380px;
+  height: 43px;
+  place-content: space-between;
+  align-items: flex-start;
+  outline: solid 1px #201f1e;
+  outline-offset: 0px;
+  background-color: #fff;
+}
+.rowDetailsRow10 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 9.0909%;
+  bottom: 81.8182%;
+  width: 1380px;
+  height: 43px;
+  place-content: space-between;
+  align-items: flex-start;
+  outline: solid 1px #201f1e;
+  outline-offset: 0px;
+  background-color: #e2e2e2;
+}

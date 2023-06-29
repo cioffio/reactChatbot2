@@ -1,8 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import './App.css';
 import DataForm from './DataForm.js';
 import ChatForm from './ChatForm.js';
 import Messages from './Messages.js';
+import CaseFiles from './CaseFiles/CaseFiles.tsx';
+import IDDClippedContentVersion from './IDDClippedContentVersion/IDDClippedContentVersion.tsx';
+import Data from '../src/IDDClippedContentVersion/Data/Data.js'
+import MyChatbot from './ChatBot.js';
+import ChatBot from 'react-simple-chatbot';
+
+import { ThemeProvider } from 'styled-components';
+
+
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -10,7 +20,27 @@ function App() {
   const [loading, setLoading] = useState(false);
   const responseRef = useRef(null);
 
-  useEffect(() => {
+
+  function makeAPICall() {
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ key: 'value' }) // Replace with the data you want to send
+    };
+  
+    fetch('/api/report', requestOptions) // Replace '/api/route' with your actual Flask route
+      .then(response => response.json())
+      .then(data => {
+        // Handle the response data here
+        console.log(data);
+      })
+      .catch(error => {
+        // Handle any errors
+        console.error('Error:', error);
+      });
+  }
+  
+  useEffect(() => {     
     // Fetch initial message when the component mounts
     fetchMessage('Hello myGPT!');
   }, []);
@@ -42,6 +72,7 @@ function App() {
     scrollToBottom();
   };
 
+
   const handleMessageChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -58,53 +89,24 @@ function App() {
   };
 
   const scrollToBottom = () => {
-    responseRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (responseRef.current) {
+      responseRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
-// TODO: create these variables using more compact notation (you can define a single that stores all of these, don't have time to look up and test the exact syntax)
-  const [fullLegalName, setFullLegalName] = useState('');
-  const [registeredAddress, setRegisteredAddress] = useState('');
+
 
   return (
-    <div className="App">
-      <h1>MyGPT</h1>
-      
-      <div className="message-container">
-      <Messages 
-        props = {{
-          messages,
-          responseRef
-        }}
-      />
-      <div ref={responseRef}></div>
-    </div>
-
-      <div className="bottom-container">
-      <ChatForm 
-        props = {{
-          handleSubmit,
-          inputValue,
-          handleMessageChange,
-          loading
-        }}
-      />
-      
-      <DataForm 
-
-        props={{
-          // generateReport,
-          // handleLegalNameChange,
-          // handleRegisteredAddressChange,
-          setFullLegalName,
-          setRegisteredAddress,
-          setLoading,
-          fullLegalName,
-          registeredAddress,
-          loading
-          }}    
-      />
-    </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/case-files" element={<CaseFiles />} />
+        <Route path="/idd-component" element={<IDDClippedContentVersion />} />
+        <Route path="/data-filled" element={<Data />} />
+      </Routes>
+      <div className="App">
+          <MyChatbot headerTitle="SmartKyc"/>
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;

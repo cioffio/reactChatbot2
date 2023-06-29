@@ -9,11 +9,8 @@
 
 :root {
   --text-color: #FFFFFF;
-  --icon-color: #ACACBE;
-  --icon-hover-bg: #5b5e71;
-  --placeholder-color: #dcdcdc;
-  --outgoing-chat-bg: #343541;
-  --incoming-chat-bg: #444654;
+  --outgoing-chat-bg: #87CEEB;  /* Updated color */
+  --incoming-chat-bg: #90EE90;  /* Updated color */
   --outgoing-chat-border: #343541;
   --incoming-chat-border: #444654;
 }
@@ -21,95 +18,67 @@
 body {
   background: var(--outgoing-chat-bg);
 }
-
-
 .App {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: relative;
 }
 
-
+.right-container {
+  position: fixed; /* Set position fixed */
+  top: 0;
+  right: 0;
+  width: 25%; /* Set the width to occupy 1/4 of the page */
+  height: 100%; /* Occupy the full height of the viewport */
+  overflow-y: auto;
+  background-color: #f0f0f0;
+}
 
 .bottom-container {
+  position: fixed; /* Set position fixed */
+  bottom: 20px; /* Adjust the positioning as desired */
+  right: 20px; /* Adjust the positioning as desired */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
   padding: 20px;
 }
 
-.input-form {
-  display: flex;
-  align-items: left;
-}
-
-.input-text {
-  flex-grow: 10;
-  size: 10px;
-  /* Your other styles... */
-}
-
-.App button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-}
-
-.App h1 {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #FFFFFF;
-}
-
 .message-container {
-  flex-grow: 10;
+  flex-grow: 1;
+  max-height: calc(100% - 40px); /* Adjusted for padding of bottom-container */
   overflow-y: auto;
-  
+  background-color: var(--outgoing-chat-bg);
 }
-
 .message {
-  text-align: left;
+  text-align: right;
   display: flex;
   font-size: 1rem;
   padding: 10px;
   overflow-y: auto;
+}
 
+.user, .bot {
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  padding: 0 10px;
+  color: var(--text-color);
+  padding: 10px;
 }
 
 .user {
   background: var(--outgoing-chat-bg);
   border: 1px solid var(--outgoing-chat-border);
-  display: flex;
-  text-align: left;
-  justify-content: left;
-  flex-direction: row;
-  padding: 0 10px;
-  text-align: left;
-  color: var(--text-color);
-  padding: 10px;
 }
 
 .bot {
   background: var(--incoming-chat-bg);
   border: 1px solid var(--incoming-chat-border);
-  display: flex;
-  text-align: left;
-  flex-direction: row;
-  padding: 0 10px;
-  color: var(--text-color);
-  padding: 10px;
 }
 
-
 .logo {
-  width:40px;
+  width: 10px;
   margin-right: 15px;
   margin-left: 30px;
   flex-direction: column;
   align-self: auto;
 }
-
-
